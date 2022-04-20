@@ -5,6 +5,7 @@
  */
 package galeriaprojekt;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Iterator;
 
@@ -12,7 +13,7 @@ import java.util.Iterator;
  *
  * @author Helyes.Marton
  */
-public class Galeria implements Iterable<KiallitasiTargy> {
+public class Galeria implements Iterable<KiallitasiTargy>, Serializable{
 
     private ArrayList<KiallitasiTargy> kiallitasiTargyak;
 

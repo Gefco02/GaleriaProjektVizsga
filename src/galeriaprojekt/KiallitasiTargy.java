@@ -5,6 +5,7 @@
  */
 package galeriaprojekt;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.Date;
@@ -13,7 +14,7 @@ import java.util.Date;
  *
  * @author Helyes.Marton
  */
-public abstract class KiallitasiTargy implements Comparable<KiallitasiTargy> {
+public abstract class KiallitasiTargy implements Comparable<KiallitasiTargy>, Serializable {
 
     private LocalDate letrehozDatum;
     private String keszito;
@@ -46,7 +47,7 @@ public abstract class KiallitasiTargy implements Comparable<KiallitasiTargy> {
 
     @Override
     public String toString() {
-        return "KiallitasiTargy{" + "letrehozDatum=" + letrehozDatum + ", keszito=" + keszito + ", cim=" + cim + '}';
+        return "KiallitasiTargy{" + "letrehozDatum=" + letrehozDatum + ", keszito=" + keszito + ", cim=" + cim + '}'+"\n";
     }
 
     
