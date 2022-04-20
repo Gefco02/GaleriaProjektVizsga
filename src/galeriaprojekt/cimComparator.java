@@ -6,13 +6,17 @@
 package galeriaprojekt;
 
 import java.text.Collator;
+import java.util.Comparator;
 
 /**
  *
  * @author Helyes.Marton
  */
-public class cimComparator {
-    public int cim(KiallitasiTargy egyik, KiallitasiTargy masik) {
+public class cimComparator implements Comparator<KiallitasiTargy> {
+
+
+    @Override
+    public int compare(KiallitasiTargy egyik, KiallitasiTargy masik) {
         Collator col = Collator.getInstance();
         return col.compare(egyik.getCim(), masik.getCim());
     }

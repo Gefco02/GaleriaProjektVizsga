@@ -6,14 +6,18 @@
 package galeriaprojekt;
 
 import java.text.Collator;
+import java.util.Comparator;
 
 /**
  *
  * @author Helyes.Marton
  */
-public class keszitoComparator {
+public class keszitoComparator implements Comparator<KiallitasiTargy> {
 
-    public int keszito(KiallitasiTargy egyik, KiallitasiTargy masik) {
+
+
+    @Override
+    public int compare(KiallitasiTargy egyik, KiallitasiTargy masik) {
         Collator col = Collator.getInstance();
         return col.compare(egyik.getKeszito(), masik.getKeszito());
     }

@@ -17,16 +17,26 @@ public class Galeria implements Iterable<KiallitasiTargy> {
     private ArrayList<KiallitasiTargy> kiallitasiTargyak;
 
     public Galeria() {
+        kiallitasiTargyak= new ArrayList<KiallitasiTargy>();
+
+        
     }
 
     public ArrayList<KiallitasiTargy> getKiallitasiTargyak() {
         return kiallitasiTargyak;
     }
-    
+    public void berak(KiallitasiTargy kt) {
+        kiallitasiTargyak.add(kt);
+    }
 
     @Override
     public Iterator<KiallitasiTargy> iterator() {
         return getKiallitasiTargyak().iterator();
+    }
+
+    @Override
+    public String toString() {
+        return "Galeria{" + "kiallitasiTargyak=" + kiallitasiTargyak + '}';
     }
 
 }

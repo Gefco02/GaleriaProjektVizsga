@@ -20,10 +20,7 @@ public abstract class KiallitasiTargy implements Comparable<KiallitasiTargy> {
     private String cim;
 
     public KiallitasiTargy(LocalDate letrehozDatum, String keszito, String cim) {
-        if(letrehozDatum.compareTo(LocalDate.now())==1){
-        }
         this.letrehozDatum = letrehozDatum;
-        
         this.keszito = keszito;
         this.cim = cim;
     }
@@ -32,10 +29,10 @@ public abstract class KiallitasiTargy implements Comparable<KiallitasiTargy> {
         this(LocalDate.now(), keszito, cim);
     }
 
-    public static keszitoComparator keszito() {
+    public static keszitoComparator keszitoRendezes() {
         return new keszitoComparator();
     }
-    public static cimComparator cim() {
+    public static cimComparator cimRendezes() {
         return new cimComparator();
     }
 
@@ -47,4 +44,10 @@ public abstract class KiallitasiTargy implements Comparable<KiallitasiTargy> {
         return cim;
     }
 
+    @Override
+    public String toString() {
+        return "KiallitasiTargy{" + "letrehozDatum=" + letrehozDatum + ", keszito=" + keszito + ", cim=" + cim + '}';
+    }
+
+    
 }
