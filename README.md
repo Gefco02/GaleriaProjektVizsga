@@ -1,1 +1,1 @@
-# GaleriaProjektVizsga
+# Helyes Márton
